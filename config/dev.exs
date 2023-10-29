@@ -2,9 +2,9 @@ import Config
 
 # Configure your database
 config :teams, Teams.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
+  username: "root",
+  password: "root",
+  hostname: "db",
   database: "teams_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
