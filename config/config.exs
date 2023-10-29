@@ -41,6 +41,10 @@ config :phoenix, :json_library, Jason
 
 config :teams, ash_apis: [Teams.Account]
 
+config :teams, Teams.Auth.Guardian,
+    isuuer: "teams_api",
+    secret_key: "eNnbysBgHvQmm2G2WH1QGLHYcq3B8tepFyT06IWwHO8a4YxIW/pVcgZtcYa4hBCI"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
