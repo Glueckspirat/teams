@@ -1,8 +1,5 @@
 defmodule Teams.Repo do
-  use AshPostgres.Repo,otp_app: :teams
-
-  def installed_extensions do
-    ["uuid-ossp", "citext"]
-  end
-
+  use Ecto.Repo,
+    otp_app: :teams,
+    adapter: Ecto.Adapters.Postgres
 end

@@ -17,7 +17,8 @@ defmodule TeamsWeb.Router do
   scope "/api", TeamsWeb do
     pipe_through [:api, :auth]
     get "/", HelloController, :index
-    post "/register", AuthController, :register
+    post "/users/login", UserController, :login
+    post "/users/register", UserController, :register
   end
 
   scope "/api", TeamsWeb do

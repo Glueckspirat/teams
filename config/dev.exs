@@ -5,7 +5,7 @@ config :teams, Teams.Repo,
   username: "root",
   password: "root",
   hostname: "db",
-  database: "teams_dev",
+  database: "teams",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

@@ -44,8 +44,6 @@ defmodule Teams.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
-      {:ash, "~> 2.16"},
-      {:ash_postgres, "~> 1.3"},
       {:guardian, "2.3.2"},
       {:bcrypt_elixir, "~> 3.1"}
     ]

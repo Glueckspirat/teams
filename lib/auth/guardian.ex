@@ -11,8 +11,10 @@ defmodule Teams.Auth.Guardian do
   end
 
   def resource_from_claims(%{"sub" => id}) do
-    resource = Teams.Account.User.get_by_id(id)
+    resource = Teams.UserManagement.get_user!(id)
     {:ok, resource}
+  rescue
+    Ecto.NoResultsError -> {:error, :resource_not_found}
   end
 
   def resource_from_claims(_claims) do
